@@ -3,4 +3,6 @@
     <string name="login_auth">Authenticate</string>
     <string name="app_logo">App Logo</string>
     <string name="logout">logout</string>
+    <string name="profile">profile</string>
+    <string name="posts">posts</string>
 </resources>
