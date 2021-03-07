@@ -37,6 +37,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         drawerLayout = findViewById(id.drawer_layout);
         navigationView = findViewById(id.nav_view);
 
+        init();
     }
 
    private void init() {
@@ -80,7 +81,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                     .build();
 
             Navigation.findNavController(this, id.nav_host_fragment_container)
-                    .navigate(id.profileScreen);
+                    .navigate(id.profileScreen, null, navOptions);
         } else if (itemId == id.nav_posts) {
             if(isValidDestination(id.postsScreen)) {
                 Navigation.findNavController(this, id.nav_host_fragment_container)
