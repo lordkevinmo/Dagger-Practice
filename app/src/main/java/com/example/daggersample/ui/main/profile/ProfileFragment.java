@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.daggersample.R;
@@ -47,8 +48,7 @@ public class ProfileFragment extends DaggerFragment {
         username = view.findViewById(R.id.username);
         website = view.findViewById(R.id.website);
 
-        viewModel = ViewModelProviders.of(this, providerFactory)
-                .get(ProfileViewModel.class);
+        viewModel = new ViewModelProvider(this, providerFactory).get(ProfileViewModel.class);
     }
 
     private void subscribeObservers() {
